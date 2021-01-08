@@ -46,7 +46,7 @@ h1, article {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-header {
+header, header * {
     color: var(--componentColor);
     display: flex;
     align-items: center;
