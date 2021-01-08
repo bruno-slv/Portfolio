@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Bruno Santos</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Noto+Sans+JP:wght@300;500&display=swap"
+        rel="stylesheet">
     <link href='https://css.gg/menu.css' rel='stylesheet'>
     <link href='https://css.gg/close.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
@@ -14,7 +16,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="darkBack">
         <h1>Bruno Santos</h1>
 
         <button class="btn" onclick="displayMenu()">
@@ -23,13 +25,13 @@
         </button>
 
 
-        <nav id="navbar">
+        <nav id="navbar" class="darkBack">
             <ul>
-                <li><a onclick="closeMenu()" href="#sobre" >Sobre Mim</a></li>
-                <li><a onclick="closeMenu()" href="#skills" >Skills</a></li>
-                <li><a onclick="closeMenu()" href="#projetos" >Projetos</a></li>
-                <li><a onclick="closeMenu()" href="#formacao" >Formação</a></li>
-                <li><a onclick="closeMenu()" href="#contato" >Contato</a></li>
+                <li><a onclick="closeMenu()" href="#sobre">Sobre Mim</a></li>
+                <li><a onclick="closeMenu()" href="#skills">Skills</a></li>
+                <li><a onclick="closeMenu()" href="#projetos">Projetos</a></li>
+                <li><a onclick="closeMenu()" href="#formacao">Formação</a></li>
+                <li><a onclick="closeMenu()" href="#contato">Contato</a></li>
                 <li>
                     <button class="btn">
                         <i onclick="closeMenu()" class="gg-close"></i>
@@ -40,57 +42,96 @@
 
     </header>
 
-    <span>Olá, meu nome é Bruno 👋</span>
+    <article>
+        <p>
+            Olá, meu nome é Bruno
+            <image src="wavinghand.gif" style="width: 1em;">
+        </p>
+    </article>
 
-    <section id="sobre">
+    <section class="justify" id="sobre">
         <h3>Sobre Mim</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium erat varius purus consequat, a
-            pharetra justo rhoncus. Praesent pharetra, nunc euismod consectetur feugiat, tortor velit accumsan libero,
-            sit amet dapibus lacus nibh in massa. Cras eget fringilla justo. Nam ultricies lorem sed hendrerit congue.
-            Curabitur a laoreet velit. Nam sit amet dui condimentum, interdum mi quis, mattis neque. Nam pulvinar a
-            augue in efficitur. In non pellentesque enim, ac laoreet ipsum. Etiam rutrum ac nisi ac tincidunt. Mauris
-            scelerisque feugiat bibendum. Maecenas et rhoncus diam. Duis tincidunt quam metus, eget sodales felis semper
-            quis. Nam sit amet arcu interdum, pharetra ipsum in, consectetur ligula. Praesent ut molestie velit, ut
-            sollicitudin sem.
+        <p>
+            Desde pequeno sempre fui fascinado por computação.
+            Ver toda a história desse ramo da matemática aplicada
+            sempre me deixou abismado. Afinal, como transistores
+            poderiam fazer cálculos complexos?
+        </p>
+
+        <p>
+            Foi por essa fascinação cultivada desde os primórdios
+            da minha vida que me tornei um desenvolvedor web autodidata.
+        </p>
     </section>
 
-    <section id="skills">
+    <section class="rounded" id="skills">
         <h3>Skills</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium erat varius purus consequat, a
-            pharetra justo rhoncus. Praesent pharetra, nunc euismod consectetur feugiat, tortor velit accumsan libero,
-            sit amet dapibus lacus nibh in massa. Cras eget fringilla justo. Nam ultricies lorem sed hendrerit congue.
-            Curabitur a laoreet velit. Nam sit amet dui condimentum, interdum mi quis, mattis neque. Nam pulvinar a
-            augue in efficitur. In non pellentesque enim, ac laoreet ipsum. Etiam rutrum ac nisi ac tincidunt. Mauris
-            scelerisque feugiat bibendum. Maecenas et rhoncus diam. Duis tincidunt quam metus, eget sodales felis semper
-            quis. Nam sit amet arcu interdum, pharetra ipsum in, consectetur ligula. Praesent ut molestie velit, ut
-            sollicitudin sem.
+        <div class="row">
+            <input type="image" src="logos/js.png">
+            <input type="image" src="logos/python.png">
+            <input type="image" src="logos/arduino.png">
+            <span class="breakline"></span>
+            <input type="image" src="logos/react.png">
+            <input type="image" src="logos/html.png">
+            <input type="image" src="logos/css.png">
+        </div>
     </section>
 
-    <section id="projetos">
+    <section id="projetos" class="darkBack rounded">
         <h3>Projetos</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium erat varius purus consequat, a
-            pharetra justo rhoncus. Praesent pharetra, nunc euismod consectetur feugiat, tortor velit accumsan libero,
-            sit amet dapibus lacus nibh in massa. Cras eget fringilla justo. Nam ultricies lorem sed hendrerit congue.
-            Curabitur a laoreet velit. Nam sit amet dui condimentum, interdum mi quis, mattis neque. Nam pulvinar a
-            augue in efficitur. In non pellentesque enim, ac laoreet ipsum. Etiam rutrum ac nisi ac tincidunt. Mauris
-            scelerisque feugiat bibendum. Maecenas et rhoncus diam. Duis tincidunt quam metus, eget sodales felis semper
-            quis. Nam sit amet arcu interdum, pharetra ipsum in, consectetur ligula. Praesent ut molestie velit, ut
-            sollicitudin sem.</p>
+        <div>
+            <h4>Portfolio Pessoal</h4>
+            <p><b>Status:</b> Finalizado</p>
+
+            <div class="btns">
+                <a href='https://github.com/bruno-slv/bruno-slv.github.io' target="_blank">
+                    <img src="logos/github.svg" alt=""> GitHub
+                </a>
+
+                <a href='#'>
+                    <img src="logos/link.svg" alt=""> Site
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <h4>Pure JavaScript Calculator</h4>
+            <p><b>Status:</b> Finalizado</p>
+
+            <a href='https://github.com/bruno-slv/Pure-JavaScript-Calculator' target="_blank">
+                <img src="logos/github.svg" alt=""> GitHub
+            </a>
+        </div>
+
+        <div>
+            <h4>Landing Page Template</h4>
+            <p><b>Status:</b> Pré-Produção</p>
+        </div>
+        <div>
+            <h4>Em construção</h4>
+        </div>
     </section>
 
-    <section id="formacao">
+    <section class="rounded" id="formacao">
         <h3>Formação</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium erat varius purus consequat, a
-            pharetra justo rhoncus. Praesent pharetra, nunc euismod consectetur feugiat, tortor velit accumsan libero,
-            sit amet dapibus lacus nibh in massa. Cras eget fringilla justo. Nam ultricies lorem sed hendrerit congue.
-            Curabitur a laoreet velit. Nam sit amet dui condimentum, interdum mi quis, mattis neque. Nam pulvinar a
-            augue in efficitur. In non pellentesque enim, ac laoreet ipsum. Etiam rutrum ac nisi ac tincidunt. Mauris
-            scelerisque feugiat bibendum. Maecenas et rhoncus diam. Duis tincidunt quam metus, eget sodales felis semper
-            quis. Nam sit amet arcu interdum, pharetra ipsum in, consectetur ligula. Praesent ut molestie velit, ut
-            sollicitudin sem.
+        <div class="darkBack">
+            <img src="logos/senai.png" style="width: 7em;margin: auto;" alt="">
+            <div>
+                <h4>Curso Técnico Em Eletroeletrônica</h4>
+                <p><b>Status:</b> Concluído</p>
+            </div>
+        </div>
+
+        <div class="darkBack">
+            <img src="logos/agra.png" style="margin:auto;width: 5em;padding-right: 3.5em;margin-left: .5em;" alt="">
+            <div>
+                <h4>Tecnólogo em Análise e Desenvolvimento de Sistemas</h4>
+                <p><b>Status:</b> Cursando</p>
+            </div>
+        </div>
     </section>
 
-    <section id="contato">
+    <section class="rounded" id="contato">
         <h3>Contato</h3>
         <p>Nullam cursus pretium porttitor. Nullam vulputate ante a tortor porta, sit amet ultricies quam aliquam.
             Aliquam molestie porttitor ligula sed imperdiet. Aliquam sed turpis lectus. Nullam fermentum lorem id cursus
@@ -103,7 +144,7 @@
     </section>
 
     <footer>
-        Feito Por Bruno Santos
+        Feito Por <a href="https://github.com/bruno-slv" target="_blank">Bruno Santos</a>
     </footer>
 </body>
 

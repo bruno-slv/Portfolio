@@ -1,10 +1,37 @@
-:root{
-    --componentBack: #242222;
+:root {
+    --componentBack: #8559da;
+    --darkTone: #512da8;
+    --componentColor: #fff;
+    --plainColor: #000;
+    --aboutColor: #ededed;
 }
+
+input[type="image"] {
+    padding: 0;
+    width: 6em;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type="image"]:active, section#projetos div a:active {
+    filter: brightness(80%);
+}
+
+div.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.breakline {
+    flex-basis: 100%;
+    height: 0;
+}
+
 body {
     font-family: 'Noto Sans JP', sans-serif;
-    background-color: #121212;
-    color: white;
+    background-color: var(--componentColor);
+    color: var(--plainColor);
     width: 100%;
     margin: 0;
 }
@@ -15,15 +42,23 @@ h1 {
     margin: 0;
 }
 
+h1, article {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
 header {
-    color: #fff;
-    background-color: var(--componentBack);
+    color: var(--componentColor);
     display: flex;
     align-items: center;
     padding: 10px;
     justify-content: space-between;
 }
-nav ul{
+
+.darkBack {
+    background-color: var(--darkTone);
+}
+
+nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,9 +67,9 @@ nav ul{
     margin: 2% 0;
     height: 100%;
 }
-nav{
+
+nav {
     display: none;
-    background: var(--componentBack);
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -43,22 +78,135 @@ nav{
     animation-name: slidein;
     animation-duration: .3s;
 }
-nav ul li{
+
+nav ul li {
     padding: 4% 0;
     font-size: 1.5em;
 }
-nav ul li a:link{
+
+nav ul li a:link, button, footer a {
     text-decoration: none;
 }
-nav ul li a:visited{
+
+nav ul li a:visited, footer a {
     color: currentColor;
 }
 
-section{
-    width: 100%;
-    background-color: var(--componentBack);
+footer a:active {
+    font-weight: 700;
 }
-.btn{
+
+section:not(#sobre):not(#projetos) {
+    width: 85%;
+    margin: 4em auto;
+    background-color: var(--componentBack);
+    color: var(--componentColor);
+    padding: 1em;
+}
+
+section * {
+    padding: 1em;
+    margin: 0;
+}
+
+section#sobre {
+    width: 100%;
+    background-color: var(--aboutColor);
+    padding: .7em 0 2em;
+}
+
+section#projetos {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 1em;
+}
+
+section#projetos div:not(.btns) {
+    background-color: var(--componentBack);
+    width: 60%;
+    margin: 1.5em auto;
+    padding: 1.5em 3em;
+}
+
+section#projetos h3 {
+    margin: 0 auto;
+    padding: .5em 0;
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+section#projetos div *:not(button):not(image) {
+    margin: 0;
+    padding: .5em 0;
+    text-align: left;
+}
+
+section#projetos div a {
+    margin-top: 1em;
+    display: flex;
+    width: 6em;
+    height: 1.5em;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    border-radius: .5em;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: var(--darkTone);
+}
+
+section#projetos div a:active {
+    transform: translatey(.1em);
+}
+
+section#formacao div.darkBack{
+    margin: 1em auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+section#formacao div.darkBack img{
+    align-self: flex-start;
+}
+section#formacao div.darkBack *:not(img){
+    margin-top: -3px;
+    padding: 0;
+}
+section#formacao div.darkBack img{
+    padding: 0 2em 0 0;
+}
+
+section#formacao div.darkBack p{
+    font-size: .8em;
+    padding-top: 2em;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    height: 65vh;
+    padding: 1em;
+    font-size: 2.7em;
+}
+
+footer {
+    background-color: var(--componentBack);
+    padding: 1em;
+    text-align: center;
+    color: var(--componentColor);
+}
+
+.btn, button {
     width: min-content;
     padding: 6px 0;
     background-color: transparent;
@@ -68,7 +216,15 @@ section{
     color: #fff;
 }
 
-@media (min-width: 1000px){
+.justify * {
+    text-align: justify;
+}
+
+section.rounded:not(#projetos), .rounded div{ 
+    border-radius: 0.675em;
+}
+
+@media (min-width: 1000px) {
     nav {
         display: inline;
         position: relative;
@@ -80,13 +236,13 @@ section{
         flex-direction: row;
         justify-content: space-between;
     }
-    nav ul li{
-        padding: 0;   
+    nav ul li {
+        padding: 0;
     }
-    h1{
+    h1 {
         width: 30%;
     }
-    .gg-menu, .gg-close{
-        display:  none;
+    .gg-menu, .gg-close {
+        display: none;
     }
 }
