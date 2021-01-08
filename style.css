@@ -1,0 +1,92 @@
+:root{
+    --componentBack: #242222;
+}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #121212;
+    color: white;
+    width: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 500;
+    width: 85%;
+    margin: 0;
+}
+
+header {
+    color: #fff;
+    background-color: var(--componentBack);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 2% 0;
+    height: 100%;
+}
+nav{
+    display: none;
+    background: var(--componentBack);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation-name: slidein;
+    animation-duration: .3s;
+}
+nav ul li{
+    padding: 4% 0;
+    font-size: 1.5em;
+}
+nav ul li a:link{
+    text-decoration: none;
+}
+nav ul li a:visited{
+    color: currentColor;
+}
+
+section{
+    width: 100%;
+    background-color: var(--componentBack);
+}
+.btn{
+    width: min-content;
+    padding: 6px 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+@media (min-width: 1000px){
+    nav {
+        display: inline;
+        position: relative;
+        height: min-content;
+        width: 60%;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav ul li{
+        padding: 0;   
+    }
+    h1{
+        width: 30%;
+    }
+    .gg-menu, .gg-close{
+        display:  none;
+    }
+}

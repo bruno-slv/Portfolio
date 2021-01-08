@@ -1,37 +1,35 @@
-## Welcome to GitHub Pages
+# :books: Meu Portfolio Pessoal
 
-You can use the [editor on GitHub](https://github.com/bruno-slv/bruno-slv.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## :star: Iniciando
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Simplesmente vá até [o site](https://bruno-slv.github.io) e confira meus trabalhos mais recentes :stuck_out_tongue:.
 
-### Markdown
+## :ledger: Seções do site
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* **Sobre Mim** - Onde falo um pouco da minha vida pessoal e visão
+* **Skills** - Discorre sobre as ferramentas que domino
+* **Projetos** - Lista meus últimos projetos
+* **Formação** - Enumera os cursos e conhecimentos que já adquiri
+* **Contato** - Seção com minhas informações de contato (linkedin, email, etc)
 
-```markdown
-Syntax highlighted code block
+## :pencil2: Uso 
 
-# Header 1
-## Header 2
-### Header 3
+O documento foi desenvolvido para mostrar minhas competências como desenvolvedor front-end em uma página estática, a fim de compilar meus principais projetos pessoais em um só lugar.
 
-- Bulleted
-- List
+## 💻 Software usado
 
-1. Numbered
-2. List
+Para desenvolver o projeto foram usadas as ferramentas:
 
-**Bold** and _Italic_ and `Code` text
+* JavasScript
+* HTML5
+* CSS3
+* Visual Studio Code
+* Chrome Dev. Tools
 
-[Link](url) and ![Image](src)
-```
+## 🤝 Contribuindo
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Todos são bem vindos para contribuir com o projeto, bem como ramificar este repositório para uso posterior.
 
-### Jekyll Themes
+## :page_facing_up: Licença
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bruno-slv/bruno-slv.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[ISC](https://opensource.org/licenses/ISC)

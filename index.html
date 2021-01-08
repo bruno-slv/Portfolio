@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Bruno Santos</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href='https://css.gg/menu.css' rel='stylesheet'>
+    <link href='https://css.gg/close.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="src/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Bruno Santos</h1>
+
+        <button class="btn" onclick="displayMenu()">
+            <i class="gg-menu">
+            </i>
+        </button>
+
+
+        <nav id="navbar">
+            <ul>
+                <li><a onclick="closeMenu()" href="#sobre" >Sobre Mim</a></li>
+                <li><a onclick="closeMenu()" href="#skills" >Skills</a></li>
+                <li><a onclick="closeMenu()" href="#projetos" >Projetos</a></li>
+                <li><a onclick="closeMenu()" href="#formacao" >Formação</a></li>
+                <li><a onclick="closeMenu()" href="#contato" >Contato</a></li>
+                <li>
+                    <button class="btn">
+                        <i onclick="closeMenu()" class="gg-close"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <span>Olá, meu nome é Bruno 👋</span>
+
+    <section id="sobre">
+        <h3>Sobre Mim</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium erat varius purus consequat, a
+            pharetra justo rhoncus. Praesent pharetra, nunc euismod consectetur feugiat, tortor velit accumsan libero,
+            sit amet dapibus lacus nibh in massa. Cras eget fringilla justo. Nam ultricies lorem sed hendrerit congue.
+            Curabitur a laoreet velit. Nam sit amet dui condimentum, interdum mi quis, mattis neque. Nam pulvinar a
+            augue in efficitur. In non pellentesque enim, ac laoreet ipsum. Etiam rutrum ac nisi ac tincidunt. Mauris
+            scelerisque feugiat bibendum. Maecenas et rhoncus diam. Duis tincidunt quam metus, eget sodales felis semper
+            quis. Nam sit amet arcu interdum, pharetra ipsum in, consectetur ligula. Praesent ut molestie velit, ut
+            sollicitudin sem.
+    </section>
+
+    <section id="skills">
+        <h3>Skills</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium erat varius purus consequat, a
+            pharetra justo rhoncus. Praesent pharetra, nunc euismod consectetur feugiat, tortor velit accumsan libero,
+            sit amet dapibus lacus nibh in massa. Cras eget fringilla justo. Nam ultricies lorem sed hendrerit congue.
+            Curabitur a laoreet velit. Nam sit amet dui condimentum, interdum mi quis, mattis neque. Nam pulvinar a
+            augue in efficitur. In non pellentesque enim, ac laoreet ipsum. Etiam rutrum ac nisi ac tincidunt. Mauris
+            scelerisque feugiat bibendum. Maecenas et rhoncus diam. Duis tincidunt quam metus, eget sodales felis semper
+            quis. Nam sit amet arcu interdum, pharetra ipsum in, consectetur ligula. Praesent ut molestie velit, ut
+            sollicitudin sem.
+    </section>
+
+    <section id="projetos">
+        <h3>Projetos</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium erat varius purus consequat, a
+            pharetra justo rhoncus. Praesent pharetra, nunc euismod consectetur feugiat, tortor velit accumsan libero,
+            sit amet dapibus lacus nibh in massa. Cras eget fringilla justo. Nam ultricies lorem sed hendrerit congue.
+            Curabitur a laoreet velit. Nam sit amet dui condimentum, interdum mi quis, mattis neque. Nam pulvinar a
+            augue in efficitur. In non pellentesque enim, ac laoreet ipsum. Etiam rutrum ac nisi ac tincidunt. Mauris
+            scelerisque feugiat bibendum. Maecenas et rhoncus diam. Duis tincidunt quam metus, eget sodales felis semper
+            quis. Nam sit amet arcu interdum, pharetra ipsum in, consectetur ligula. Praesent ut molestie velit, ut
+            sollicitudin sem.</p>
+    </section>
+
+    <section id="formacao">
+        <h3>Formação</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium erat varius purus consequat, a
+            pharetra justo rhoncus. Praesent pharetra, nunc euismod consectetur feugiat, tortor velit accumsan libero,
+            sit amet dapibus lacus nibh in massa. Cras eget fringilla justo. Nam ultricies lorem sed hendrerit congue.
+            Curabitur a laoreet velit. Nam sit amet dui condimentum, interdum mi quis, mattis neque. Nam pulvinar a
+            augue in efficitur. In non pellentesque enim, ac laoreet ipsum. Etiam rutrum ac nisi ac tincidunt. Mauris
+            scelerisque feugiat bibendum. Maecenas et rhoncus diam. Duis tincidunt quam metus, eget sodales felis semper
+            quis. Nam sit amet arcu interdum, pharetra ipsum in, consectetur ligula. Praesent ut molestie velit, ut
+            sollicitudin sem.
+    </section>
+
+    <section id="contato">
+        <h3>Contato</h3>
+        <p>Nullam cursus pretium porttitor. Nullam vulputate ante a tortor porta, sit amet ultricies quam aliquam.
+            Aliquam molestie porttitor ligula sed imperdiet. Aliquam sed turpis lectus. Nullam fermentum lorem id cursus
+            pretium. Morbi sed nisl posuere, maximus odio ac, rhoncus ipsum. Sed at ornare leo. In luctus neque erat,
+            vitae pharetra nisl aliquam in. Curabitur convallis maximus sem. Donec ac sodales justo, at ultrices ante.
+            Donec at orci mattis, viverra ligula at, pretium dolor. Fusce gravida sodales purus. Ut sit amet facilisis
+            sem. Cras iaculis aliquet dapibus. Suspendisse faucibus, ligula eget suscipit lobortis, ligula felis
+            lobortis metus, nec elementum arcu tellus vel leo. Maecenas porta tortor sit amet erat elementum placerat.
+        </p>
+    </section>
+
+    <footer>
+        Feito Por Bruno Santos
+    </footer>
+</body>
+
+</html>
