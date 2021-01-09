@@ -5,6 +5,23 @@
     --plainColor: #000;
     --aboutColor: #ededed;
 }
+a{
+    text-decoration: none;
+    color: var(--componentColor);
+}
+
+a:visited {
+    color: currentColor;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer a:hover, section#contato a:hover {
+    font-weight: 700;
+    color: #c2c0c0;
+}
 
 input[type="image"] {
     padding: 0;
@@ -18,27 +35,34 @@ input[type="image"]:active, section#projetos div a:active {
 }
 
 div.row {
+    width: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+div.row *{
+    margin: .5em 0;
 }
 
 .breakline {
     flex-basis: 100%;
     height: 0;
 }
-
+.noMargin{
+    margin: 0;
+}
 body {
     font-family: 'Noto Sans JP', sans-serif;
     background-color: var(--componentColor);
     color: var(--plainColor);
     width: 100%;
-    margin: 0;
 }
 
 h1 {
     font-weight: 500;
     width: 85%;
+    padding: 0;
     margin: 0;
 }
 
@@ -50,7 +74,7 @@ header {
     color: var(--componentColor);
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 1em .5em;
     justify-content: space-between;
 }
 header *{
@@ -84,18 +108,6 @@ nav {
 nav ul li {
     padding: 4% 0;
     font-size: 1.5em;
-}
-
-nav ul li a:link, button, footer a {
-    text-decoration: none;
-}
-
-nav ul li a:visited, footer a {
-    color: currentColor;
-}
-
-footer a:active {
-    font-weight: 700;
 }
 
 section:not(#sobre):not(#projetos) {
@@ -132,7 +144,6 @@ section#projetos div:not(.btns) {
 }
 
 section#projetos h3 {
-    margin: 0 auto;
     padding: .5em 0;
     font-size: 2em;
 }
@@ -141,7 +152,7 @@ h4 {
     font-size: 1em;
 }
 
-section#projetos div *:not(button):not(image) {
+section#projetos div *:not(image) {
     margin: 0;
     padding: .5em 0;
     text-align: left;
@@ -154,10 +165,8 @@ section#projetos div a {
     height: 1.5em;
     justify-content: space-around;
     align-items: center;
-    color: #fff;
     border-radius: .5em;
     font-weight: 700;
-    text-decoration: none;
     background-color: var(--darkTone);
 }
 
@@ -165,27 +174,33 @@ section#projetos div a:active {
     transform: translatey(.1em);
 }
 
-section#formacao div.darkBack{
+section.display div.darkBack{
     margin: 1em auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 }
-section#formacao div.darkBack img{
+section.display div.darkBack img{
     align-self: flex-start;
 }
-section#formacao div.darkBack *:not(img){
-    margin-top: -3px;
+section.display div.darkBack *:not(img){
     padding: 0;
 }
-section#formacao div.darkBack img{
-    padding: 0 2em 0 0;
+section.display div.darkBack img{
+    width: 7em;
+    padding: 0;
+    margin: auto 0;
 }
 
-section#formacao div.darkBack p{
-    font-size: .8em;
-    padding-top: 2em;
+section.display div.darkBack div{
+    width: 50%;
+    margin-left: 1em;
+}
+section.display div.darkBack div p{
+    padding: 1em 0;
+}
+section.display a{
+    margin: auto;
 }
 
 .btns {
@@ -227,24 +242,93 @@ section.rounded:not(#projetos), .rounded div{
 }
 
 @media (min-width: 1000px) {
+    header{
+        display: flex;
+        align-items: normal;
+        padding: 0;
+        height: fit-content;
+    }
+    header *{
+        margin: 0;
+    }
+    
     nav {
         display: inline;
         position: relative;
         height: min-content;
         width: 60%;
+        margin-top: auto;
     }
     nav ul {
         display: flex;
         flex-direction: row;
+        margin: 0;
+        height: 4em;
         justify-content: space-between;
     }
     nav ul li {
+        height: 100%;
         padding: 0;
+    }
+    nav ul li:hover{
+        box-sizing: border-box;
+       border-bottom: .25em solid var(--componentBack);
     }
     h1 {
         width: 30%;
+        margin: .75em;
     }
     .gg-menu, .gg-close {
         display: none;
+    }
+    section#sobre h3, section#sobre p{
+        font-size: 1.5em;
+        width: 50%;
+        padding: 0;
+        margin: 1em auto;
+        text-align: left;
+    }
+    section#sobre{
+        padding: 3em 0;
+    }
+    section:not(#sobre):not(#projetos){
+        width: 60%;
+        padding: 3em;
+    }
+    input[type="image"] {
+        width: 10em;
+    }
+    div.row{
+        padding: 0;
+    }
+    h3{
+        font-size: 3em;
+        padding: 0;
+        margin-bottom: .5em;
+        width: min-content;
+    }
+    section.display div.darkBack{
+        width: 50%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 999px){
+    section.display div.darkBack{
+        width: 70%;
+    }
+    section.display div.darkBack div{
+        margin-left: 2em;
+    }
+}
+
+@media (max-width: 320px){
+    section.display div.darkBack div{
+        width: 20%;
+    }
+    section#skills input[type="image"]{
+        width: 4.5em;
+    }
+    section#projetos div a{
+        font-size: .9em;
     }
 }
