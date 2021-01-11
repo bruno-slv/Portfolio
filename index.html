@@ -17,7 +17,7 @@
 
 <body class="noMargin">
     <header class="darkBack">
-        <h1 >Bruno Santos</h1>
+        <h1>Bruno Santos</h1>
 
         <button class="btn" onclick="displayMenu()">
             <i class="gg-menu">
@@ -27,14 +27,14 @@
 
         <nav id="navbar" class="darkBack">
             <ul>
-                <li><a onclick="closeMenu()" href="#sobre">Sobre Mim</a></li>
-                <li><a onclick="closeMenu()" href="#skills">Skills</a></li>
-                <li><a onclick="closeMenu()" href="#projetos">Projetos</a></li>
-                <li><a onclick="closeMenu()" href="#formacao">Formação</a></li>
-                <li><a onclick="closeMenu()" href="#contato">Contato</a></li>
+                <li><a onclick="hide('#navbar')" href="#sobre">Sobre Mim</a></li>
+                <li><a onclick="hide('#navbar')" href="#skills">Skills</a></li>
+                <li><a onclick="hide('#navbar')" href="#projetos">Projetos</a></li>
+                <li><a onclick="hide('#navbar')" href="#formacao">Formação</a></li>
+                <li><a onclick="hide('#navbar')" href="#contato">Contato</a></li>
                 <li>
                     <button class="btn">
-                        <i onclick="closeMenu()" class="gg-close"></i>
+                        <i onclick="hide('#navbar')" class="gg-close"></i>
                     </button>
                 </li>
             </ul>
@@ -50,69 +50,97 @@
     </article>
 
     <section class="justify" id="sobre">
-        <h3>Sobre Mim</h3>
-        <p>
-            Desde pequeno sempre fui fascinado por computação.
-            Ver toda a história desse ramo da matemática aplicada
-            sempre me deixou abismado. Afinal, como transistores
-            poderiam fazer cálculos complexos?
-        </p>
+        <div id="innerS">
+            <h3>Sobre Mim</h3>
+            <p>
+                Desde pequeno sempre fui fascinado por computação.
+                Ver toda a história desse ramo da matemática aplicada
+                sempre me deixou abismado. Afinal, como transistores
+                poderiam fazer cálculos complexos?
+            </p>
 
-        <p>
-            Foi por essa fascinação cultivada desde os primórdios
-            da minha vida que me tornei um desenvolvedor web autodidata.
-        </p>
+            <p>
+                Foi por essa fascinação cultivada desde os primórdios
+                da minha vida que me tornei um desenvolvedor web autodidata.
+            </p>
+        </div>
     </section>
 
     <section class="rounded" id="skills">
         <h3>Skills</h3>
-        <div class="row">
-            <input type="image" src="logos/js.png">
-            <input type="image" src="logos/python.png">
-            <input type="image" src="logos/arduino.png">
-            <span class="breakline"></span>
-            <input type="image" src="logos/react.png">
-            <input type="image" src="logos/html.png">
-            <input type="image" src="logos/css.png">
+
+        <div class="popup rounded">
+            <div id="popupContainer">
+                <button class="btn right">
+                    <i onclick="hide('.popup')" class="gg-close"></i>
+                </button>
+                
+                <h3 id="skillTitle"></h3>
+                <ul id="skillList"></ul>
+            </div>
+
         </div>
+
+        <div class="row">
+            <input type="image" onclick="displaySkills(this.id)" alt="JavaScript" id="JavaScript" src="logos/js.png">
+            <input type="image" onclick="displaySkills(this.id)" alt="Python" id="Python" src="logos/python.png">
+            <input type="image" onclick="displaySkills(this.id)" alt="Arduino" id="Arduino" src="logos/arduino.png">
+            <span class="breakline"></span>
+            <input type="image" onclick="displaySkills(this.id)" alt="React" id="React" src="logos/react.png">
+            <input type="image" onclick="displaySkills(this.id)" alt="HTML" id="HTML" src="logos/html.png">
+            <input type="image" onclick="displaySkills(this.id)" alt="CSS" id="CSS" src="logos/css.png">
+        </div>
+
     </section>
 
     <section id="projetos" class="darkBack rounded">
-        <h3 style="margin: auto;width: 60%;text-align: left;">Projetos</h3>
-        <div>
-            <h4>Portfolio Pessoal</h4>
-            <p><b>Status:</b> Finalizado</p>
+        <h3>Projetos</h3>
 
-            <div class="btns">
-                <a href='https://github.com/bruno-slv/bruno-slv.github.io' target="_blank">
-                    <img src="logos/github.svg" alt=""> GitHub
-                </a>
+        <div class="projeto">
+            <div class="innerP">
+                <h4>Portfolio Pessoal</h4>
+                <p><b>Status:</b> Finalizado</p>
+                <div class="btns">
+                    <a href='https://github.com/bruno-slv/bruno-slv.github.io' target="_blank">
+                        <img src="logos/github.svg" alt=""> GitHub
+                    </a>
 
-                <a href='#'>
-                    <img src="logos/link.svg" alt=""> Site
-                </a>
+                    <a href='#'>
+                        <img src="logos/link.svg" alt=""> Site
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div>
-            <h4>Pure JavaScript Calculator</h4>
-            <p><b>Status:</b> Finalizado</p>
+        <div class="projeto">
+            <div class="innerP">
+                <h4>Pure JavaScript Calculator</h4>
+                <p><b>Status:</b> Finalizado</p>
 
-            <a href='https://github.com/bruno-slv/Pure-JavaScript-Calculator' target="_blank">
-                <img src="logos/github.svg" alt=""> GitHub
-            </a>
+                <div class="btns">
+                    <a href='https://github.com/bruno-slv/Pure-JavaScript-Calculator' target="_blank">
+                        <img src="logos/github.svg" alt=""> GitHub
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div>
-            <h4>Landing Page Template</h4>
-            <p><b>Status:</b> Pré-Produção</p>
+        <div class="projeto">
+            <div class="innerP">
+                <h4>Landing Page Template</h4>
+                <p><b>Status:</b> Pré-Produção</p>
+            </div>
         </div>
-        <div>
-            <h4>Em construção</h4>
+
+        <div class="projeto">
+            <div class="innerP">
+                <h4>Em construção</h4>
+            </div>
         </div>
+
     </section>
 
-    <section class="rounded display" id="formacao">
+    <section class="rounded container" id="formacao">
         <h3>Formação</h3>
         <div class="darkBack">
             <img src="logos/senai.png" alt="">
@@ -131,7 +159,7 @@
         </div>
     </section>
 
-    <section class="rounded display" id="contato">
+    <section class="rounded container" id="contato">
         <h3>Contato</h3>
         <div class="darkBack">
             <img src="logos/fb.png" style="width: 2em;" alt="">

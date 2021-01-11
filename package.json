@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/bruno-slv/bruno-slv.github.io/issues"
   },
-  "homepage": "https://github.com/bruno-slv/bruno-slv.github.io#readme"
+  "homepage": "https://github.com/bruno-slv/bruno-slv.github.io#readme",
+  "dependencies": {}
 }

@@ -5,93 +5,30 @@
     --plainColor: #000;
     --aboutColor: #ededed;
 }
-a{
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
     text-decoration: none;
-    color: var(--componentColor);
 }
 
 a:visited {
     color: currentColor;
 }
+
 ul {
-    margin: 0;
     padding: 0;
-}
-
-footer a:hover, section#contato a:hover {
-    font-weight: 700;
-    color: #c2c0c0;
-}
-
-input[type="image"] {
-    padding: 0;
-    width: 6em;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-input[type="image"]:active, section#projetos div a:active {
-    filter: brightness(80%);
-}
-
-div.row {
-    width: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-div.row *{
-    margin: .5em 0;
-}
-
-.breakline {
-    flex-basis: 100%;
-    height: 0;
-}
-.noMargin{
-    margin: 0;
-}
-body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: var(--componentColor);
-    color: var(--plainColor);
-    width: 100%;
-}
-
-h1 {
-    font-weight: 500;
-    width: 85%;
-    padding: 0;
-    margin: 0;
-}
-
-h1, article {
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-header {
-    color: var(--componentColor);
-    display: flex;
-    align-items: center;
-    padding: 1em .5em;
-    justify-content: space-between;
-}
-header *{
-    color: var(--componentColor);
-}
-.darkBack {
-    background-color: var(--darkTone);
+    flex-direction: column;
+    list-style: none;
+    margin: 2% 0;
+    height: 100%;
 }
 
 nav ul {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 2% 0;
-    height: 100%;
 }
 
 nav {
@@ -110,117 +47,203 @@ nav ul li {
     font-size: 1.5em;
 }
 
-section:not(#sobre):not(#projetos) {
-    width: 85%;
-    margin: 4em auto;
-    background-color: var(--componentBack);
-    color: var(--componentColor);
-    padding: 1em;
-}
-
-section * {
-    padding: 1em;
-    margin: 0;
-}
-
-section#sobre {
-    width: 100%;
-    background-color: var(--aboutColor);
-    padding: .7em 0 2em;
-}
-
-section#projetos {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 0 0 1em;
-}
-
-section#projetos div:not(.btns) {
-    background-color: var(--componentBack);
-    width: 60%;
-    margin: 1.5em auto;
-    padding: 1.5em 3em;
-}
-
-section#projetos h3 {
-    padding: .5em 0;
-    font-size: 2em;
-}
-
 h4 {
     font-size: 1em;
 }
 
-section#projetos div *:not(image) {
-    margin: 0;
-    padding: .5em 0;
-    text-align: left;
+footer a:hover, section#contato a:hover {
+    font-weight: 700;
+    color: #c2c0c0;
 }
 
-section#projetos div a {
-    margin-top: 1em;
-    display: flex;
+input[type="image"] {
     width: 6em;
-    height: 1.5em;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform .5s;
+}
+
+input[type="image"]:active, section#projetos div a:hover {
+    filter: brightness(80%);
+}
+input[type="image"]:hover{
+    -webkit-transform: translatey(10px);
+    transform: translatey(10px);
+}
+
+div.row {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.row input[type="image"] {
+    margin: 5% 0;
+}
+
+.breakline {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.noMargin {
+    margin: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--componentColor);
+    color: var(--plainColor);
+    width: 100%;
+}
+
+h1 {
+    font-weight: 500;
+    width: 85%;
+    margin: 0;
+}
+
+h1, article {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+h3{
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1em .5em;
+    justify-content: space-between;
+}
+
+header, header *, section:not(#sobre), footer, .btn, button, a {
+    color: var(--componentColor);
+}
+
+footer, #contato, #skills, #formacao, #projetos div:not(.btns) {
+    background-color: var(--componentBack);
+}
+
+nav ul, input[type="image"], h1, .container .darkBack *, #projetos div a img, b {
+    padding: 0;
+}
+
+.darkBack {
+    background-color: var(--darkTone);
+}
+
+#skills, #formacao, #contato {
+    width: 80%;
+    margin: 4em auto;
+    padding: 2em;
+}
+#contato h3, #contato .darkBack, #formacao .darkBack{
+    width: 90%;
+    margin: 1em auto;
+}
+
+#sobre {
+    background-color: var(--aboutColor);
+}
+
+#innerS{
+    width: 80%;
+    margin: 2.5em auto;
+}
+
+#projetos{
+    padding: 2em 0;
+}
+#projetos .projeto, #projetos h3 {
+    width: 70%;
+}
+
+#projetos h3{
+    margin: 2% auto;
+}
+.projeto{
+    margin: 1.5em auto;
+}
+#projects .projeto{
+    margin: 0 auto;
+}
+#projetos div a {
+    display: flex;
+    width: 45%;
+    height: 2em;
     justify-content: space-around;
     align-items: center;
     border-radius: .5em;
     font-weight: 700;
     background-color: var(--darkTone);
 }
-
-section#projetos div a:active {
+.projeto h4{
+    margin: 0;
+}
+.innerP{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.4em 0;
+}
+#projetos div a:active {
     transform: translatey(.1em);
 }
-
-section.display div.darkBack{
+#projects{
+    padding: 1em;
+}
+.container .darkBack {
     margin: 1em auto;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-section.display div.darkBack img{
-    align-self: flex-start;
-}
-section.display div.darkBack *:not(img){
-    padding: 0;
-}
-section.display div.darkBack img{
-    width: 7em;
-    padding: 0;
-    margin: auto 0;
+
+.container .darkBack p {
+    margin-top: 1em;
 }
 
-section.display div.darkBack div{
+.container .darkBack img {
+    width: 7em;
+    margin: auto 0;
+    padding: .5em;
+    align-self: flex-start;
+}
+
+.container .darkBack div {
     width: 50%;
     margin-left: 1em;
 }
-section.display div.darkBack div p{
-    padding: 1em 0;
-}
-section.display a{
+
+.container a {
     margin: auto;
 }
 
 .btns {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+}
+
+.btns a {
+    margin: 0;
 }
 
 article {
     display: flex;
     align-items: center;
     height: 65vh;
-    padding: 1em;
     font-size: 2.7em;
 }
 
 footer {
-    background-color: var(--componentBack);
-    padding: 1em;
     text-align: center;
-    color: var(--componentColor);
+}
+
+footer, article, section:not(#projetos){
+    padding: 1em;
 }
 
 .btn, button {
@@ -230,28 +253,70 @@ footer {
     outline: none;
     border: none;
     background-repeat: no-repeat;
-    color: #fff;
 }
 
 .justify * {
     text-align: justify;
 }
 
-section.rounded:not(#projetos), .rounded div{ 
+.rounded:not(#projetos), .rounded div {
     border-radius: 0.675em;
+}
+.popup, #navbar{
+    z-index: 1;
+}
+.popup {
+    display: none;
+    background-color: #140078;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60vh;
+    height: 80vh;
+    transform: translate(-50%, -50%);
+    animation-name: popup;
+    animation-duration: .2s;
+}
+.popup ul, .popup h3{
+    width: 80%;
+    margin: 1em auto;
+}
+.popup #popupContainer{
+    margin: 1em 0;
+}
+
+.gg-close:hover, .gg-menu:hover {
+    cursor: pointer;
+}
+
+.right {
+    float: right;
+    margin: 0 1em;
+}
+
+@keyframes popup {
+    from {
+        width: 20vh;
+        height: 20vh;
+        color: transparent;
+    }
+    to {
+        width: 60vh;
+        height: 80vh;
+        color: #fff;
+    }
 }
 
 @media (min-width: 1000px) {
-    header{
+    header {
         display: flex;
         align-items: normal;
         padding: 0;
         height: fit-content;
     }
-    header *{
+    header * {
         margin: 0;
     }
-    
     nav {
         display: inline;
         position: relative;
@@ -270,65 +335,53 @@ section.rounded:not(#projetos), .rounded div{
         height: 100%;
         padding: 0;
     }
-    nav ul li:hover{
+    nav ul li:hover {
         box-sizing: border-box;
-       border-bottom: .25em solid var(--componentBack);
+        border-bottom: .25em solid var(--componentBack);
     }
     h1 {
         width: 30%;
         margin: .75em;
     }
-    .gg-menu, .gg-close {
+    .gg-menu, nav .gg-close {
         display: none;
     }
-    section#sobre h3, section#sobre p{
-        font-size: 1.5em;
+    #innerS{
         width: 50%;
-        padding: 0;
-        margin: 1em auto;
-        text-align: left;
     }
-    section#sobre{
-        padding: 3em 0;
-    }
-    section:not(#sobre):not(#projetos){
-        width: 60%;
-        padding: 3em;
-    }
-    input[type="image"] {
-        width: 10em;
-    }
-    div.row{
-        padding: 0;
+    #innerS p{
+        font-size: 1.5em;
     }
     h3{
-        font-size: 3em;
-        padding: 0;
-        margin-bottom: .5em;
-        width: min-content;
+        font-size: 2.25em;
     }
-    section.display div.darkBack{
+    #contato, #formacao, #skills{
         width: 50%;
     }
+    #skills h3, #skills .row{
+        width: 80%;
+        margin: auto;
+    }
+    input[type="image"]{
+        width: 7em;
+    }
+    #projetos .projeto, #projetos h3{
+        width: 40%;
+    }
+    #formacao h3, #formacao .darkBack, #contato h3, #contato .darkBack{
+        width: 80%;
+        margin: 1em auto;
+    }
 }
 
-@media (min-width: 700px) and (max-width: 999px){
-    section.display div.darkBack{
-        width: 70%;
-    }
-    section.display div.darkBack div{
-        margin-left: 2em;
-    }
-}
-
-@media (max-width: 320px){
-    section.display div.darkBack div{
+@media (max-width: 320px) {
+    section.container div.darkBack div {
         width: 20%;
     }
-    section#skills input[type="image"]{
+    section#skills input[type="image"] {
         width: 4.5em;
     }
-    section#projetos div a{
+    section#projetos div a {
         font-size: .9em;
     }
 }
