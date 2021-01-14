@@ -2,9 +2,7 @@ const qSel = (qry) => document.querySelector(qry);
 
 function capitalize(str) {
     function isAllUpperCase(word){
-        return word.split("").map(
-            letter => letter.charCodeAt(0) > 64 && letter.charCodeAt(0) < 91
-        ).reduce((currentValue, ac) => currentValue + ac) == word.length
+        return word.toUpperCase() === word;
     }
 
     return str.split(" ").map(word => {

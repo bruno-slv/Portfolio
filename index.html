@@ -5,28 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Bruno Santos</title>
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Noto+Sans+JP:wght@300;500&display=swap"
         rel="stylesheet">
+
     <link href='https://css.gg/menu.css' rel='stylesheet'>
     <link href='https://css.gg/close.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="src/index.js"></script>
 </head>
 
-<body class="noMargin">
+<body>
     <header class="darkBack">
         <h1>Bruno Santos</h1>
 
         <button class="btn" onclick="displayMenu()">
-            <i class="gg-menu">
-            </i>
+            <i class="gg-menu"></i>
         </button>
 
 
         <nav id="navbar" class="darkBack">
-            <ul>
+            <ul class="centered">
                 <li><a onclick="hide('#navbar')" href="#sobre">Sobre Mim</a></li>
                 <li><a onclick="hide('#navbar')" href="#skills">Skills</a></li>
                 <li><a onclick="hide('#navbar')" href="#projetos">Projetos</a></li>
@@ -39,10 +42,9 @@
                 </li>
             </ul>
         </nav>
-
     </header>
 
-    <article>
+    <article class="centered">
         <p>
             Olá, meu nome é Bruno
             <image src="wavinghand.gif" style="width: 1em;">
@@ -50,42 +52,37 @@
     </article>
 
     <section class="justify" id="sobre">
-        <div id="innerS">
-            <h3>Sobre Mim</h3>
-            <p>
-                Desde pequeno sempre fui fascinado por computação.
-                Ver toda a história desse ramo da matemática aplicada
-                sempre me deixou abismado. Afinal, como transistores
-                poderiam fazer cálculos complexos?
-            </p>
+        <h3>Sobre Mim</h3>
+        <p>
+            Desde pequeno sempre fui fascinado por computação.
+            Ver toda a história desse ramo da matemática aplicada
+            sempre me deixou abismado. Afinal, como transistores
+            poderiam fazer cálculos complexos?
+        </p>
 
-            <p>
-                Foi por essa fascinação cultivada desde os primórdios
-                da minha vida que me tornei um desenvolvedor web autodidata.
-            </p>
-        </div>
+        <p>
+            Foi por essa fascinação cultivada desde os primórdios
+            da minha vida que me tornei um desenvolvedor web autodidata.
+        </p>
     </section>
 
     <section class="rounded" id="skills">
         <h3>Skills</h3>
 
         <div class="popup rounded">
-            <div id="popupContainer">
-                <button class="btn right">
-                    <i onclick="hide('.popup')" class="gg-close"></i>
-                </button>
-                
-                <h3 id="skillTitle"></h3>
-                <ul id="skillList"></ul>
-            </div>
+            <button class="btn closePopUp">
+                <i onclick="hide('.popup')" class="gg-close"></i>
+            </button>
 
+            <h4 id="skillTitle"></h4>
+            <ul id="skillList"></ul>
         </div>
 
         <div class="row">
             <input type="image" onclick="displaySkills(this.id)" alt="JavaScript" id="JavaScript" src="logos/js.png">
             <input type="image" onclick="displaySkills(this.id)" alt="Python" id="Python" src="logos/python.png">
             <input type="image" onclick="displaySkills(this.id)" alt="Arduino" id="Arduino" src="logos/arduino.png">
-            <span class="breakline"></span>
+            <div class="break"></div>
             <input type="image" onclick="displaySkills(this.id)" alt="React" id="React" src="logos/react.png">
             <input type="image" onclick="displaySkills(this.id)" alt="HTML" id="HTML" src="logos/html.png">
             <input type="image" onclick="displaySkills(this.id)" alt="CSS" id="CSS" src="logos/css.png">
@@ -93,11 +90,11 @@
 
     </section>
 
-    <section id="projetos" class="darkBack rounded">
+    <section id="projetos" class="darkBack">
         <h3>Projetos</h3>
 
-        <div class="projeto">
-            <div class="innerP">
+        <div class="projetosWrap">
+            <div class="projeto rounded">
                 <h4>Portfolio Pessoal</h4>
                 <p><b>Status:</b> Finalizado</p>
                 <div class="btns">
@@ -110,10 +107,8 @@
                     </a>
                 </div>
             </div>
-        </div>
 
-        <div class="projeto">
-            <div class="innerP">
+            <div class="projeto rounded">
                 <h4>Pure JavaScript Calculator</h4>
                 <p><b>Status:</b> Finalizado</p>
 
@@ -123,17 +118,13 @@
                     </a>
                 </div>
             </div>
-        </div>
 
-        <div class="projeto">
-            <div class="innerP">
+            <div class="projeto rounded">
                 <h4>Landing Page Template</h4>
                 <p><b>Status:</b> Pré-Produção</p>
             </div>
-        </div>
 
-        <div class="projeto">
-            <div class="innerP">
+            <div class="projeto rounded">
                 <h4>Em construção</h4>
             </div>
         </div>
@@ -142,7 +133,8 @@
 
     <section class="rounded container" id="formacao">
         <h3>Formação</h3>
-        <div class="darkBack">
+
+        <div class="darkBack centered">
             <img src="logos/senai.png" alt="">
             <div>
                 <h4>Curso Técnico Em Eletroeletrônica</h4>
@@ -150,7 +142,7 @@
             </div>
         </div>
 
-        <div class="darkBack">
+        <div class="darkBack centered">
             <img src="logos/agra.png" alt="">
             <div>
                 <h4>Tecnólogo em Análise e Desenvolvimento de Sistemas</h4>
@@ -162,12 +154,12 @@
     <section class="rounded container" id="contato">
         <h3>Contato</h3>
         <div class="darkBack">
-            <img src="logos/fb.png" style="width: 2em;" alt="">
-            <a href="https://www.facebook.com/brunotopster" target="_blank">@brunotopster</a>
+            <img src="logos/fb.png" alt="">
+            <a href="https://www.facebook.com/brun0sts" target="_blank">@brun0sts</a>
         </div>
 
         <div class="darkBack">
-            <img style="width: 2em;" src="logos/github.svg" alt="">
+            <img src="logos/github.svg" alt="">
             <a href="https://github.com/bruno-slv" target="_blank">@bruno-slv</a>
     </section>
 
