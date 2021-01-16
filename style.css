@@ -4,6 +4,9 @@
     --baseColor: #140078;
     --lightBase: #8559da;
     --darkBase: #512da8;
+    --popupWidth: 20em;
+    --popupHeight: 30em;
+    
 }
 
 /*Classes*/
@@ -164,15 +167,20 @@ article {
 
 .popup {
     display: none;
-    background-color: var(--baseColor);
+    background-color: rgb(255, 255, 255);
     top: 50%;
     left: 50%;
-    width: 60vh;
-    height: 80%;
+    width: var(--popupWidth);
+    height: var(--popupHeight);
     z-index: 1;
     animation-name: popup;
     transform: translate(-50%, -50%);
     animation-duration: .2s;
+    box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.3);
+}
+
+.popup .gg-close, .popup {
+    color: #000;
 }
 
 .popup h4, .popup ul {
@@ -303,6 +311,10 @@ footer {
 /*==-==-==PC Layout==-==-==*/
 
 @media (min-width: 1000px) {
+    /*Variables Reassign*/
+    :root {
+        --popupWidth: 22em;
+    }
     /*Header*/
     .gg-menu, nav .gg-close {
         display: none;
@@ -348,7 +360,7 @@ footer {
     #formacao h3, #contato h3 {
         margin-bottom: .8em;
     }
-    #skills h3, #skills .row, #formacao .darkBack, #contato .darkBack {
+    #formacao h3, #contato h3, #skills h3, #skills .row, #formacao .darkBack, #contato .darkBack {
         width: 70%;
     }
     /*Section 'Sobre'*/
@@ -364,10 +376,10 @@ footer {
         font-size: 1.5em;
     }
     /*Section 'Projetos'*/
-    #projetos h3{
+    #projetos h3 {
         text-align: center;
     }
-    .projetosWrap{
+    .projetosWrap {
         margin: 0 auto;
         width: 65%;
         display: grid;
@@ -386,19 +398,33 @@ footer {
         padding: .5em 0;
     }
 }
+
 /*==-==-==375px max-width Layout==-==-==*/
-@media (max-width: 375px){
-    .btns a{
+
+@media (max-width: 375px) {
+    /*Variables Reassign*/
+    :root {
+        --popupWidth: 17em;
+        --popupHeight: 25em;
+    }
+    /*Section 'Skills'*/
+    input[type="image"] {
         width: 5em;
     }
-    #formacao .darkBack img{
+    /*Section 'Projetos'*/
+    .btns a {
+        width: 5em;
+    }
+    /*Section 'Formação'*/
+    #formacao .darkBack img {
         margin-left: .5em;
         width: 5em;
     }
-    #formacao .darkBack div{
-        
+    #formacao .darkBack div {
+        margin-left: 1.5em;
     }
 }
+
 /*Animations*/
 
 @keyframes popup {
@@ -407,9 +433,8 @@ footer {
         height: 40vh;
         color: transparent;
     }
-    to {
-        width: 60vh;
-        height: 80%;
-        color: currentColor;
+    to{
+        width: var(--popupWidth);
+        height: var(--popupHeight);
     }
 }
