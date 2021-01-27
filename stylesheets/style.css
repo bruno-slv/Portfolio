@@ -1,0 +1,409 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    width: fit-content;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.transparent {
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 0;
+    height: 36px;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+header {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    display: flex;
+    position: fixed;
+    background: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: .5em 1.5em;
+    z-index: 2;
+}
+
+nav {
+    display: none;
+    background: #4f4f4f;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    animation: navIn .5s;
+}
+
+@keyframes navIn {
+    from {
+        transform: translatex(80%);
+    }
+}
+
+nav button {
+    float: right;
+    margin: .7em 1.5em;
+}
+
+nav ul {
+    margin: auto;
+    margin-top: 25%;
+    width: fit-content;
+    text-align: center;
+}
+
+nav li {
+    margin: 1em 0;
+    font-size: 2em;
+}
+
+#home {
+    width: 87%;
+    margin: auto;
+}
+
+#home img {
+    width: 100%;
+    margin: 2em 0;
+}
+
+#home p {
+    text-align: justify;
+    margin: 1em 0;
+    font-size: 1.125em;
+    line-height: 1.7em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.skill, .project, .course, #contato div {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+}
+
+.skill {
+    width: 290px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 3em auto;
+    box-sizing: border-box;
+    padding: .5em;
+}
+
+.skill p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+}
+
+svg.logo {
+    transform: scale(.8);
+    -webkit-transform-origin-x: 0;
+    margin: auto;
+}
+
+.skill div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.skill div svg {
+    transform: scale(.7);
+    -webkit-transform-origin-x: 0;
+}
+
+.project {
+    width: 300px;
+    margin: 100px auto;
+    display: grid;
+    box-sizing: border-box;
+    padding: 2em 0;
+}
+
+.project img {
+    width: fit-content;
+    margin: auto;
+}
+
+.project h3, .project div {
+    width: 225px;
+    margin: .5em auto;
+}
+
+.project div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project button {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #000000;
+    outline: none;
+    font-size: 1em;
+}
+
+.project button:active {
+    filter: invert(1);
+}
+
+.project button svg {
+    fill: #000;
+}
+
+.course {
+    width: 325px;
+    height: 150px;
+    margin: 1.5em auto;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+.course svg, .course div {
+    margin: auto;
+}
+
+.course h3 {
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+#contato div {
+    width: 310px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 .5em;
+    margin: 50px auto;
+    font-size: 2.25em;
+}
+
+a, a:active, a:visited {
+    text-decoration: none;
+    color: currentColor;
+}
+
+footer {
+    background-color: #4F4F4F;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+footer p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.socialMedias {
+    width: 118px;
+    margin: auto;
+}
+
+.socialMedias .transparent {
+    height: 24px;
+}
+
+.socialMedias div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sendEmail {
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], textarea {
+    width: 150px;
+    padding: .5em;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="text"] {
+    height: 24px;
+}
+
+textarea {
+    margin: 10px 0;
+    resize: none;
+    height: 125px;
+}
+
+.sendEmail button {
+    width: 77px;
+    height: 28px;
+    background: #D3D3D3;
+    border: none;
+    font-size: 1em;
+}
+
+.alertText {
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: .7em;
+}
+
+@media (max-width: 320px) {
+    .project {
+        width: 91.958%;
+        margin: 100px auto;
+    }
+    .course {
+        width: 98%;
+    }
+}
+
+@media (min-width: 1000px) {
+    #open, #close {
+        display: none;
+    }
+    nav {
+        display: inline;
+        position: relative;
+        width: fit-content;
+        background: none;
+        color: #000;
+        animation: none;
+        width: 50%;
+    }
+    nav ul {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    nav ul li {
+        font-size: 1.5em;
+    }
+    nav li a:hover {
+        box-sizing: border-box;
+        padding-bottom: 19px;
+        border-bottom: 2px solid black;
+    }
+    header {
+        padding: 0 5em;
+    }
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #home img, .container div {
+        margin-top: 5em;
+    }
+    #home img {
+        height: 450px;
+        width: auto;
+    }
+    .container div {
+        width: 300px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        margin-bottom: 30px;
+    }
+    #skills {
+        display: grid;
+        margin: 10em auto;
+        width: 100%;
+        grid-template-columns: repeat(2, 50%)
+    }
+    .skill {
+        width: 500px;
+        height: 200px;
+        grid-template-columns: 30% 70%;
+    }
+    .skill p {
+        font-size: 2em;
+    }
+    svg.logo {
+        transform: scale(1);
+    }
+    .skill div {
+        height: 80%;
+        align-self: center;
+        margin-left: 10%;
+    }
+    #projetos {
+        width: 100%;
+        margin: 10em auto;
+        display: grid;
+        grid-template-columns: repeat(3, calc(100%/3));
+    }
+    .project {
+        margin: 50px auto;
+    }
+    #formacao {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        margin: 10em 0;
+    }
+    .course {
+        width: 525px;
+        height: 200px;
+    }
+    .course div {
+        display: grid;
+        grid-template-rows: 85% 15%;
+        height: 60%;
+        align-self: center;
+    }
+    .course svg {
+        transform: scale(1.5);
+    }
+    h3, .course p {
+        font-size: 1.5em;
+    }
+    #contato {
+        margin: 5em 0;
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+    }
+    .socialMedias {
+        width: 228px;
+    }
+    footer p {
+        font-size: 1.5em;
+    }
+    input[type="text"], textarea {
+        width: 350px
+    }
+}
