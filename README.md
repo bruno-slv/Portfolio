@@ -4,7 +4,7 @@
 
 ## :star: Iniciando
 
-Simplesmente vá até [o site](https://bruno-slv.github.io?Portfolio) e confira meus trabalhos mais recentes :stuck_out_tongue:.
+Simplesmente vá até [o site](https://bruno-slv.github.io/Portfolio) e confira meus trabalhos mais recentes :stuck_out_tongue:.
 
 ## :ledger: Seções do site
 
