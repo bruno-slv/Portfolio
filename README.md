@@ -9,9 +9,9 @@ Simplesmente vá até [o site](https://bruno-slv.github.io/Portfolio) e confira 
 ## :ledger: Seções do site
 
 * **Home** - Onde falo um pouco da minha vida pessoal e visão
-* **Skills** - Discorre sobre as ferramentas que domino
-* **Projetos** - Lista meus últimos projetos
-* **Formação** - Enumera os cursos e conhecimentos que já adquiri
+* **Skills** - Ferramentas que domino
+* **Projetos** - Lista dos meus últimos projetos
+* **Formação** - Cursos e conhecimentos que já adquiri
 * **Contato** - Seção com minhas informações de contato (linkedin, facebook, etc), além do campo para contato do footer
 
 ## :pencil2: Uso 
@@ -23,7 +23,7 @@ O documento foi desenvolvido para mostrar minhas competências como desenvolvedo
 Para desenvolver o projeto foram usadas as ferramentas:
 
 * Figma - Prototipagem Inicial
-* JavasScript - Linguagem de Scripts
+* JavaScript - Linguagem de Scripts
 * EmailJS - Lib usada para mandar emails sem a necessidade de um código back-end
 * HTML5 - Semântica da página
 * CSS3 - Estilos em Cascata
